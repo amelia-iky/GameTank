@@ -1,16 +1,15 @@
 import greenfoot.*;
-public class Stage2 extends World
-{
+public class Stage2 extends World {
     public static Counter score;
     public static Counter hp;
     
-    public Stage2(Counter passedScore, Counter passedHp)
-    {
+    public Stage2(Counter passedScore, Counter passedHp) {
         super(800, 465, 1);
         score = passedScore;
         hp = passedHp;
         prepare();
     }
+    
     int timer;
     boolean condition = true;
     public void act()

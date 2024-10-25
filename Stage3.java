@@ -22,16 +22,15 @@ public class Stage3 extends World {
             condition = false;
         } else if(timer == 1) {
             showText("",400,100);
-        } else if(Stage1.score.getValue() >50 && Greenfoot.getRandomNumber(200)==1) {
+        }
+        
+        if(Stage1.score.getValue() >50 && Greenfoot.getRandomNumber(200)==1) {
             addObject(new enemy3(),800,322);
-            addObject(new enemy3Right(),1,322);
+            addObject(new enemy3Right(),-10,322);
         }  else if(Stage3.score.getValue() >= 500) {
             addObject(new gameWin(), 400, 232);
-            Greenfoot.delay(100);
-            showText("Score : "+Stage1.score.getValue()+" points" ,400,120);
             Greenfoot.delay(350);
             Greenfoot.setWorld(new Team());
-            
         } else if(Stage3.score.getValue() >= 210) {
             spawnbomber();
         }

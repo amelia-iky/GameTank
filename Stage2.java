@@ -20,16 +20,21 @@ public class Stage2 extends World {
             condition = false;
         } else if(timer == 1) {
             showText("",400,100);
-        } else if (new enemy2().getWorld() == null && Greenfoot.getRandomNumber(200) == 1) {
+        }
+        
+        if (new enemy2().getWorld() == null && Greenfoot.getRandomNumber(200) == 1) {
             addObject(new enemy2(),800,322);
-            addObject(new enemy2Right(),1,322);
-        } else if(score.getValue() >= 200) {
+            addObject(new enemy2Right(),-10,322);
+        }
+        
+        if(score.getValue() >= 200) {
             showText("YOU WIN!",400,100);
             Greenfoot.delay(100);
             showText("NEXT STAGE",400,100);
             Greenfoot.delay(100);
             Greenfoot.setWorld(new Stage3(score, hp));
         }
+        
         if(Stage2.hp.getValue() <=0 ) {
             hero1 hero = (hero1) getObjects(hero1.class).get(0);
             if (hero != null)
@@ -42,7 +47,7 @@ public class Stage2 extends World {
     
     public void prepare()
     {
-        addObject(new hero1(),70,322);
+        addObject(new hero1(),400,322);
         addObject(new enemy2(),800,322);
         addObject(score,60,25);
         addObject(hp,740,25);

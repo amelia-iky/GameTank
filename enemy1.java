@@ -1,20 +1,13 @@
 import greenfoot.*;
-public class enemy1 extends Actor
-{   
+public class enemy1 extends Actor {   
     int delay = 0;
-    public void act()
-    {
+    public void act() {
         setLocation(getX()-1,getY());
-        if(getX()==0)
-        {
+        if(getX()==0) {
             setLocation(getX()+1,getY());
         }
-        else if(isAtEdge())
-        {
-            getWorld().removeObject(this);
-        }
-        else if(isTouching(bulletHero.class))
-        {
+        
+        if(isTouching(bulletHero.class)) {
             removeTouching(bulletHero.class);
                 if (Stage1.score != null) {
                     Stage1.score.add(+10);
@@ -28,17 +21,17 @@ public class enemy1 extends Actor
             getWorld().addObject(new blast(),getX(),getY());
             getWorld().removeObject(this);
             Greenfoot.playSound("blast.wav");
-        }
-        else if(isTouching(hero1.class) || isTouching(hero2.class))
-        {
+        } else if(isTouching(hero1.class) || isTouching(hero1Left.class) || isTouching(hero2.class) || isTouching(hero2Left.class)) {
             removeTouching(hero1.class);
+            removeTouching(hero1Left.class);
             removeTouching(hero2.class);
+            removeTouching(hero2Left.class);
             getWorld().addObject(new blast(),getX(),getY());
             getWorld().removeObject(this);
             Greenfoot.setWorld(new OverPage());
         }
-        if(Greenfoot.getRandomNumber(3) <= 1)
-        {
+        
+        if(Greenfoot.getRandomNumber(2) <= 1) {
             shooting();
         }
     }

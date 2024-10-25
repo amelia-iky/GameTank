@@ -1,22 +1,17 @@
 import greenfoot.*;
-public class enemy2Right extends Actor
-{
+public class enemy2Right extends Actor {
     int delay = 0; 
     public void act()
     {        
         setLocation(getX()+1,getY());        
-        if(getX()==0)
-        {
+        if(getX()==0) {
             setLocation(getX()-1,getY());
-        }
-        if(isAtEdge())
-        {
+        } else if(isAtEdge()) {
             getWorld().removeObject(this);
         }
-        else if(isTouching(bulletHeroLeft.class) || isTouching(bulletHeroUp.class))
-        {
+        
+        if(isTouching(bulletHeroLeft.class)) {
             removeTouching(bulletHeroLeft.class);
-            removeTouching(bulletHeroUp.class);
                 if (Stage1.score != null) {
                     Stage1.score.add(+10);
                 }
@@ -29,9 +24,7 @@ public class enemy2Right extends Actor
             getWorld().addObject(new blast(),getX(),getY());
             getWorld().removeObject(this);
             Greenfoot.playSound("blast.wav");
-        }
-        else if(isTouching(hero1.class) || isTouching(hero1Left.class) || isTouching(hero2.class) || isTouching(hero2Left.class))
-        {
+        } else if(isTouching(hero1.class) || isTouching(hero1Left.class) || isTouching(hero2.class) || isTouching(hero2Left.class)) {
             removeTouching(hero1.class);
             removeTouching(hero1Left.class);
             removeTouching(hero2.class);
@@ -40,7 +33,8 @@ public class enemy2Right extends Actor
             getWorld().removeObject(this);
             Greenfoot.setWorld(new OverPage());
         }
-        if(Greenfoot.getRandomNumber(10) <= 5)
+        
+        if(Greenfoot.getRandomNumber(2) <= 1)
         {
             shooting();
         }

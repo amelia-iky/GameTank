@@ -1,0 +1,56 @@
+import greenfoot.*;
+public class enemy3 extends Actor
+{
+    int delay = 0; 
+    public void act()
+    {        
+        setLocation(getX()-1,getY());        
+        if(getX()==0)
+        {
+            setLocation(getX()+1,getY());
+        }
+        if(isAtEdge())
+        {
+            getWorld().removeObject(this);
+        }
+        else if(isTouching(bulletHero.class) || isTouching(bulletHeroUp.class))
+        {
+            removeTouching(bulletHero.class);
+            removeTouching(bulletHeroUp.class);
+                if (Stage1.score != null) {
+                    Stage1.score.add(+10);
+                }
+                if (Stage2.score != null) {
+                    Stage2.score.add(+10);
+                }
+                if (Stage3.score != null) {
+                    Stage3.score.add(+10);
+                }
+            getWorld().addObject(new blast(),getX(),getY());
+            getWorld().removeObject(this);
+            Greenfoot.playSound("blast.wav");
+        }
+        else if(isTouching(hero1.class) || isTouching(hero2.class))
+        {
+            removeTouching(hero1.class);
+            getWorld().addObject(new blast(),getX(),getY());
+            getWorld().removeObject(this);
+            Greenfoot.setWorld(new OverPage());
+        }
+        if(Greenfoot.getRandomNumber(10)<= 5)
+        {
+            shooting();
+        }
+    }
+    
+    public void shooting()
+    {
+        delay++;
+        if(delay==130)
+        {
+            getWorld().addObject(new bulletEnemy(),getX()-70,getY()-25);
+            delay=0;
+            Greenfoot.playSound("tank_amunisi.mp3");
+        }
+    }
+}

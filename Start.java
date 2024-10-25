@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class Start extends Actor {
+public class start extends Actor {
     public static GreenfootSound bgsound = new GreenfootSound ("bgsound.mp3");
     public void act() {
         if(Greenfoot.mousePressed(this)) {

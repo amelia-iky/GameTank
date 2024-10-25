@@ -1,13 +1,13 @@
 import greenfoot.*;
 public class Stage3 extends World {
-    public static Counter score;
-    public static Counter hp;
+    public static counter score;
+    public static counter hp;
     
     int timer;
     int timer2;
     boolean condition = true;
     boolean condition2 = true;
-    public Stage3(Counter passedScore, Counter passedHp) {
+    public Stage3(counter passedScore, counter passedHp) {
         super(800, 465, 1);
         score = passedScore;
         hp = passedHp;
@@ -22,26 +22,23 @@ public class Stage3 extends World {
             condition = false;
         } else if(timer == 1) {
             showText("",400,100);
-        } else if(Stage1.score.getValue() >50 && Greenfoot.getRandomNumber(300)==1) {
+        } else if(Stage1.score.getValue() >50 && Greenfoot.getRandomNumber(200)==1) {
             addObject(new enemy3(),800,322);
             addObject(new enemy3Right(),1,322);
-        } else if(Stage3.score.getValue() >= 110) {
-            spawnbomber();
-        } else if(Stage3.score.getValue() >= 500) {
-            showText("YOU WIN!",400,100);
+        }  else if(Stage3.score.getValue() >= 500) {
+            addObject(new gameWin(), 400, 232);
             Greenfoot.delay(100);
-            showText("CONGRATULATIONS",400,100);
             showText("Score : "+Stage1.score.getValue()+" points" ,400,120);
             Greenfoot.delay(350);
-            Greenfoot.setWorld(new team());
+            Greenfoot.setWorld(new Team());
             
+        } else if(Stage3.score.getValue() >= 210) {
+            spawnbomber();
         }
         
-        if(Stage3.hp.getValue()<=0)
-        {
+        if(Stage3.hp.getValue() <=0 ) {
             hero1 hero = (hero1) getObjects(hero1.class).get(0);
-            if (hero != null)
-            {
+            if (hero != null) {
                 removeObject(hero);
             }
             Greenfoot.setWorld(new OverPage());

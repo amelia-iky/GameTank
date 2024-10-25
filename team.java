@@ -1,13 +1,11 @@
 import greenfoot.*;
-public class team extends World {
-    public team() {    
+public class Team extends World {
+    public Team() {    
         super(800, 465, 1); 
         prepare();
     }
     
-    public void prepare()
-    {
-        mainmenu mainmenu = new mainmenu();
-        addObject(mainmenu,40,430);
+    public void prepare() {
+        addObject(new mainMenu(),40,430);
     }
 }

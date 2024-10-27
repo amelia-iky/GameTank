@@ -1,6 +1,4 @@
-<center>
-    <h1>BATTLE TANK GAME</h1>
-</center>
+<h1 align="center">BATTLE TANK GAME</h1>
 <div style="text-align: justify">
     <p align="center">
         <img height="300" src="/images/menu.png"/><br/>
@@ -36,16 +34,40 @@
         </li>
         <text>Use the arrow keys on the keyboard to move your hero.</text>
         <ol style="list-style-type: none;">
-            <li>1) Up Arrow (⬆): Move forward.</li>
-            <li>2) Down Arrow (⬇): Go backwards.
-            <li>3) Left Arrow Key (⬅): Move left.
-            <li>4) liRight Arrow Key (➡): Move right.
+            <li>1) Up Arrow Key ⬆: Move forward.</li>
+            <li>2) Down Arrow Key ⬇: Go backwards.</li>
+            <li>3) Left Arrow Key ⬅: Move left.</li>
+            <li>4) Right Arrow Key ➡: Move right.</li>
         </ol>
-        <br/>
         <li>
             <strong>Shoot</strong>
         </li>
         <p>Press the "✖" button on the keyboard to fire bullets at the enemy.
     </ul>
-
+    <h3>Conditions for Playing</h3>
+    <ul>
+        <li>
+            <strong>Hit Points (HP)</strong>
+        </li>
+        <ol style="list-style-type: none;">
+            <li>1) Your hero has 5 HP at the start of the game.</li>
+            <li>2) HP decreases by 1 every time the hero is hit by enemy fire.</li>
+            <li>3) If HP reaches 0, the game ends and you lose.</li>
+            <li>4) Right Arrow Key ➡: Move right.</li>
+        </ol>
+        <li>
+            <strong>Losing Conditions</strong>
+        </li>
+        <ol style="list-style-type: none;">
+            <li>1) The hero will immediately lose if he touches the enemy regardless of remaining HP.</li>
+        </ol>
+        <li>
+            <strong>Points for Winning a Stage:</strong>
+        </li>
+        <ol style="list-style-type: none;">
+            <li>1) Stage 1: Collect 50 points to win.</li>
+            <li>2) Stage 2: Collect 200 points to win.</li>
+            <li>3) Stage 3: Collect 500 points to win the game.</li>
+        </ol>
+    </ul>
 </div>

@@ -48,7 +48,6 @@
   - Your hero has 5 HP at the start of the game.
   - HP decreases by 1 every time the hero is hit by enemy fire.
   - If HP reaches 0, the game ends and you lose.
-  - Right Arrow Key ➡: Move right.
 
 - **Losing Conditions**
 
@@ -58,3 +57,5 @@
   - Stage 1: Collect 50 points to win.
   - Stage 2: Collect 200 points to win.
   - Stage 3: Collect 500 points to win the game.
+
+<h3 align="center">~ Happy the Game ❤ ~</h3>

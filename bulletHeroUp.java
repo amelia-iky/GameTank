@@ -11,7 +11,8 @@ public class bulletHeroUp extends Actor {
         setLocation(getX()-3 + speedX, getY()+1 + speedY);
         
         if (isAtEdge()){
-            getWorld().removeObject(this); 
+            getWorld().removeObject(this);
+            return;
         }
         
         if (isTouching(bulletEnemy4.class)) {

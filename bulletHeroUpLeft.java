@@ -12,6 +12,7 @@ public class bulletHeroUpLeft extends Actor {
         
         if (isAtEdge()) {
             getWorld().removeObject(this); 
+            return;
         }
         
         if (isTouching(bulletEnemy4.class)) {

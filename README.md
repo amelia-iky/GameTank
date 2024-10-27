@@ -1,6 +1,10 @@
-<h1 style="text-align: center">BATTLE TANK GAME</h1>
+<center>
+    <h1>BATTLE TANK GAME</h1>
+</center>
 <div style="text-align: justify">
-    <img height="300" style="display: block; margin: 0 auto;" src="/images/menu.png"/><br/>
+    <p align="center">
+        <img height="300" src="/images/menu.png"/><br/>
+    </p>
     <p>Battle Tank is a two-dimensional action game that places players in exciting battles using tanks in various arenas. Players can control their tank to move, dodge enemy attacks, and launch bullets at opponents.</p>
     <h3>Key Features</h3>
     <ol>
@@ -30,18 +34,18 @@
         <li>
             <strong>Hero Movement</strong>
         </li>
-        <ol>
-            <li>Use the arrow keys on the keyboard to move your hero.</li>
-            <li>- Up Arrow (↑): Move forward.</li>
-            <li>Down Arrow (↓): Go backwards.
-            <li>Left Arrow Key (←): Move left.
-            <li>liRight Arrow Key (→): Move right.
+        <text>Use the arrow keys on the keyboard to move your hero.</text>
+        <ol style="list-style-type: none;">
+            <li>1) Up Arrow (⬆): Move forward.</li>
+            <li>2) Down Arrow (⬇): Go backwards.
+            <li>3) Left Arrow Key (⬅): Move left.
+            <li>4) liRight Arrow Key (➡): Move right.
         </ol>
         <br/>
         <li>
             <strong>Shoot</strong>
         </li>
-        <p>Press the "X" button on the keyboard to fire bullets at the enemy.
+        <p>Press the "✖" button on the keyboard to fire bullets at the enemy.
     </ul>
 
 </div>

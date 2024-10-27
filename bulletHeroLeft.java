@@ -4,6 +4,7 @@ public class bulletHeroLeft extends Actor {
         setLocation(getX()-5,getY());
         if (isAtEdge()) {
             getWorld().removeObject(this);
+            return;
         } 
         
         if (isTouching(bulletEnemy.class)) {

@@ -23,7 +23,7 @@ public class Stage2 extends World {
             showText("",400,100);
         }
         
-        if (new enemy2().getWorld() == null && Greenfoot.getRandomNumber(200) == 1) {
+        if (new enemy2().getWorld() == null && Greenfoot.getRandomNumber(200)==1) {
             addObject(new enemy2(),800,322);
             addObject(new enemy2Right(),-10,322);
         }

@@ -58,4 +58,4 @@
   - Stage 2: Collect 200 points to win.
   - Stage 3: Collect 500 points to win the game.
 
-<h3 align="center">~ Happy the Game ❤ ~</h3>
+<h4 align="center">~ Happy the Game ❤ ~</h4>

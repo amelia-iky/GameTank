@@ -27,47 +27,34 @@
         </li>
         <p>With captivating visual design and immersive sound effects, this game provides an exciting gaming experience.</p>
     </ol>
-    <h3>How to Play</h3>
-    <ul>
-        <li>
-            <strong>Hero Movement</strong>
-        </li>
-        <text>Use the arrow keys on the keyboard to move your hero.</text>
-        <ol style="list-style-type: none;">
-            <li>1) Up Arrow Key ⬆: Move forward.</li>
-            <li>2) Down Arrow Key ⬇: Go backwards.</li>
-            <li>3) Left Arrow Key ⬅: Move left.</li>
-            <li>4) Right Arrow Key ➡: Move right.</li>
-        </ol>
-        <li>
-            <strong>Shoot</strong>
-        </li>
-        <p>Press the "✖" button on the keyboard to fire bullets at the enemy.
-    </ul>
-    <h3>Conditions for Playing</h3>
-    <ul>
-        <li>
-            <strong>Hit Points (HP)</strong>
-        </li>
-        <ol style="list-style-type: none;">
-            <li>1) Your hero has 5 HP at the start of the game.</li>
-            <li>2) HP decreases by 1 every time the hero is hit by enemy fire.</li>
-            <li>3) If HP reaches 0, the game ends and you lose.</li>
-            <li>4) Right Arrow Key ➡: Move right.</li>
-        </ol>
-        <li>
-            <strong>Losing Conditions</strong>
-        </li>
-        <ol style="list-style-type: none;">
-            <li>1) The hero will immediately lose if he touches the enemy regardless of remaining HP.</li>
-        </ol>
-        <li>
-            <strong>Points for Winning a Stage:</strong>
-        </li>
-        <ol style="list-style-type: none;">
-            <li>1) Stage 1: Collect 50 points to win.</li>
-            <li>2) Stage 2: Collect 200 points to win.</li>
-            <li>3) Stage 3: Collect 500 points to win the game.</li>
-        </ol>
-    </ul>
 </div>
+<h3>How to Play</h3>
+
+- **Hero Movement**
+
+  - Use the arrow keys on the keyboard to move your hero.
+  - Up Arrow Key ⬆: Move forward.
+  - Down Arrow Key ⬇: Go backwards.
+  - Left Arrow Key ⬅: Move left.
+  - Right Arrow Key ➡: Move right.
+
+- **Shoot**
+  - Press the "✖" button on the keyboard to fire bullets at the enemy.
+
+<h3>Conditions for Playing</h3>
+
+- **Hit Points (HP)**
+
+  - Your hero has 5 HP at the start of the game.
+  - HP decreases by 1 every time the hero is hit by enemy fire.
+  - If HP reaches 0, the game ends and you lose.
+  - Right Arrow Key ➡: Move right.
+
+- **Losing Conditions**
+
+  - The hero will immediately lose if he touches the enemy regardless of remaining HP.
+
+- **Points for Winning a Stage:**
+  - Stage 1: Collect 50 points to win.
+  - Stage 2: Collect 200 points to win.
+  - Stage 3: Collect 500 points to win the game.

@@ -7,6 +7,7 @@ public class Stage3 extends World {
     int timer2;
     boolean condition = true;
     boolean condition2 = true;
+    
     public Stage3(counter passedScore, counter passedHp) {
         super(800, 465, 1);
         score = passedScore;
@@ -16,7 +17,7 @@ public class Stage3 extends World {
     
     public void act() {
         timer--;
-        if(condition) {
+        if (condition) {
             showText("STAGE 3",400,100);
             timer = 100;
             condition = false;
@@ -24,7 +25,7 @@ public class Stage3 extends World {
             showText("",400,100);
         }
         
-        if(Stage1.score.getValue() >50 && Greenfoot.getRandomNumber(200)==1) {
+        if (Stage1.score.getValue() >50 && Greenfoot.getRandomNumber(200)==1) {
             addObject(new enemy3(),800,322);
             addObject(new enemy3Right(),-10,322);
         }  else if(Stage3.score.getValue() >= 500) {
@@ -35,7 +36,7 @@ public class Stage3 extends World {
             spawnbomber();
         }
         
-        if(Stage3.hp.getValue() <=0 ) {
+        if (Stage3.hp.getValue() <=0 ) {
             hero1 hero = (hero1) getObjects(hero1.class).get(0);
             if (hero != null) {
                 removeObject(hero);
@@ -46,7 +47,7 @@ public class Stage3 extends World {
     
     public void spawnbomber () {
         timer2--;
-        if(condition2) {
+        if (condition2) {
             timer2=100;
             condition2 = false;
         } else if (timer2 == 1) {

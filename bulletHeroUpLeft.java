@@ -1,6 +1,5 @@
 import greenfoot.*;
-public class bulletHeroUpLeft extends Actor
-{    
+public class bulletHeroUpLeft extends Actor {
     private int speedX = -4;
     private int speedY = -4;
 
@@ -11,11 +10,11 @@ public class bulletHeroUpLeft extends Actor
     private void moveDiagonally() {
         setLocation(getX() + speedX, getY() + speedY);
         
-        if(isAtEdge()){
+        if (isAtEdge()) {
             getWorld().removeObject(this); 
         }
-        else if(isTouching(bulletEnemy4.class))
-        {
+        
+        if (isTouching(bulletEnemy4.class)) {
             removeTouching(bulletEnemy4.class);
             getWorld().addObject(new blast2(),getX(),getY());
             getWorld().removeObject(this);

@@ -2,6 +2,9 @@ import greenfoot.*;
 public class Stage2 extends World {
     public static counter score;
     public static counter hp;
+
+    int timer;
+    boolean condition = true;
     
     public Stage2(counter passedScore, counter passedHp) {
         super(800, 465, 1);
@@ -9,16 +12,14 @@ public class Stage2 extends World {
         hp = passedHp;
         prepare();
     }
-    
-    int timer;
-    boolean condition = true;
+
     public void act() {
         timer--;
-        if(condition) {
+        if (condition) {
             showText("STAGE 2",400,100);
             timer = 100;
             condition = false;
-        } else if(timer == 1) {
+        } else if (timer == 1) {
             showText("",400,100);
         }
         
@@ -27,7 +28,7 @@ public class Stage2 extends World {
             addObject(new enemy2Right(),-10,322);
         }
         
-        if(score.getValue() >= 200) {
+        if (score.getValue() >= 200) {
             showText("YOU WIN!",400,100);
             Greenfoot.delay(100);
             showText("NEXT STAGE",400,100);
@@ -35,18 +36,17 @@ public class Stage2 extends World {
             Greenfoot.setWorld(new Stage3(score, hp));
         }
         
-        if(Stage2.hp.getValue() <=0 ) {
+        if (Stage2.hp.getValue() <=0 ) {
             hero1 hero = (hero1) getObjects(hero1.class).get(0);
-            if (hero != null)
-            {
+            if (hero != null) {
                 removeObject(hero);
             }
+
             Greenfoot.setWorld(new OverPage());
         }
     }
     
-    public void prepare()
-    {
+    public void prepare() {
         addObject(new hero1(),400,322);
         addObject(new enemy2(),800,322);
         addObject(score,60,25);

@@ -20,12 +20,15 @@ public class enemy4 extends Actor {
                 if (Stage1.score != null) {
                     Stage1.score.add(+10);
                 }
+
                 if (Stage2.score != null) {
                     Stage2.score.add(+10);
                 }
+
                 if (Stage3.score != null) {
                     Stage3.score.add(+10);
                 }
+
             getWorld().addObject(new blast(),getX(),getY());
             getWorld().removeObject(this);
             Greenfoot.playSound("blast.wav");
@@ -34,7 +37,7 @@ public class enemy4 extends Actor {
     
     public void bombing() {
         delay++;
-        if(delay==100) {
+        if (delay==100) {
             getWorld().addObject(new bulletEnemy4(),getX(),getY()+50);
             delay=0;
             Greenfoot.playSound("missile.mp3");

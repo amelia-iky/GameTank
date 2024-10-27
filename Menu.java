@@ -1,6 +1,7 @@
 import greenfoot.*;
 public class Menu extends World {
     public static GreenfootSound bg = new GreenfootSound ("intro.mp3");
+    
     public Menu(){    
         super(800, 465, 1); 
         prepare();
